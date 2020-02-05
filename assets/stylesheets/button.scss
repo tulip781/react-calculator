@@ -1,0 +1,32 @@
+.button {
+  outline: none;
+}
+.button-small {
+  flex: 0 1 25%;
+}
+
+.button-medium {
+  flex: 0 1 50%;
+
+}
+
+.button-large {
+  flex: 0 1 75%;
+}
+
+.button-text {
+  font-size: 20px;
+  color: white;
+}
+
+.button-color-number {
+  background-color: rgb(130, 126, 124);
+}
+
+.button-color-operator {
+  background-color: rgb(253, 158, 43);
+}
+
+.button-color-clear {
+  background-color: rgb(130, 126, 124);
+}

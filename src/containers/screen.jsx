@@ -2,12 +2,9 @@ import React, { Component } from 'react';
 
 class Screen extends Component {
   render() {
-    let screenStyle = {
-      flexGrow: '1',
-    };
     return (
-      <div className="screen" style={screenStyle}>
-
+      <div className="screen-body" >
+        <h1 className='answer'>{ this.props.answer }</h1>
       </div>
     );
   }
