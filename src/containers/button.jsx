@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+
+import { setCurrentValue } from "../actions/index";
+
+
 class Button extends Component {
-  handleClick = () => {}
+  handleClick = () => {
+    this.props.setCurrentValue(this.props.buttonValue);
+  }
   classSelector = (value) => {
     const classValue = ['button','button-text'];
     // Adding Class For Correct Button Size
@@ -33,4 +41,8 @@ class Button extends Component {
   }
 }
 
-export default Button;
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ setCurrentValue }, dispatch);
+}
+
+export default connect(null, mapDispatchToProps)(Button);

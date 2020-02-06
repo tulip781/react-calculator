@@ -8,9 +8,16 @@ import { createStore, combineReducers } from 'redux';
 import App from './components/app';
 import '../assets/stylesheets/application.scss';
 
+// reducers
+import currentValueReducer from "./reducers/current_value_reducer";
+import sumReducer from "./reducers/sum_reducer";
+import calculationReducer from "./reducers/calculation_reducer";
+
 // State and reducers
 const reducers = combineReducers({
-  changeMe: (state = null, action) => state
+  currentValue: currentValueReducer,
+  calculation: calculationReducer,
+  sum: sumReducer
 });
 
 // render an instance of the component in the DOM
