@@ -12,3 +12,4 @@ export function sumValue(buttonValue) {
     payload: buttonValue
   };
 }
+

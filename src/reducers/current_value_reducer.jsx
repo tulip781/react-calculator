@@ -1,12 +1,19 @@
-const currentValueReducer = (state, action) => {
-  if (state === undefined) {
-    return 0;
-  }
+const currentValueReducer = (state = " ", action) => {
   // TO DO handle actions
+  let num;
   switch (action.type) {
     case 'SET_CURRENT_VALUE':
-      state = state + action.payload;
-      return state;
+      if (['*', '+', '=', '÷', 'clear', '-'].includes(action.payload)) {
+        if (action.payload === 'clear' || action.payload === '=') {
+          return " ";
+        }
+        return action.payload;
+      }
+      if (['*', '+', '=', '÷', 'clear', '-'].includes(state)) {
+        return action.payload;
+      }
+      num = state.toString() + action.payload.toString();
+      return num;
     default:
       return state;
   }
