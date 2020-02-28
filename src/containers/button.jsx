@@ -3,15 +3,15 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { setCurrentValue } from "../actions/index";
+import { setCurrentValue, setCurrentValueAndSum } from "../actions/index";
 
 
 class Button extends Component {
   handleClick = () => {
-    this.props.setCurrentValue(this.props.buttonValue);
+    this.props.setCurrentValueAndSum(this.props.buttonValue);
   }
   classSelector = (value) => {
-    const classValue = ['button','button-text'];
+    const classValue = ['button', 'button-text'];
     // Adding Class For Correct Button Size
     if (value === 'clear') {
       classValue.push('button-large');
@@ -42,7 +42,7 @@ class Button extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ setCurrentValue }, dispatch);
+  return bindActionCreators({ setCurrentValue, setCurrentValueAndSum }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(Button);

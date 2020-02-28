@@ -1,11 +1,10 @@
-const sumReducer = (state, action) => {
-  if (state === undefined) {
-    return 0;
-  }
+const sumReducer = (state = 0, action) => {
   // TO DO handle actions
+  let sum;
   switch (action.type) {
     case 'SUM_VALUE':
-      return action.payload;
+      sum = state + action.payload;
+      return sum;
     default:
       return state;
   }

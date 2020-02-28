@@ -8,6 +8,7 @@ class Screen extends Component {
     return (
       <div className="screen-body" >
         <h1 className='answer'>{ this.props.currentValue }</h1>
+        <h1 className='answer'>{ this.props.sum }</h1>
       </div>
     );
   }
@@ -15,7 +16,8 @@ class Screen extends Component {
 
 function mapStateToProps(state) {
   return {
-    currentValue: state.currentValue
+    currentValue: state.currentValue,
+    sum: state.sum
   };
 }
 

@@ -13,3 +13,10 @@ export function sumValue(buttonValue) {
   };
 }
 
+
+export function setCurrentValueAndSum(buttonValue) {
+  return dispatch => {
+    dispatch(setCurrentValue(buttonValue));
+    dispatch(sumValue(buttonValue));
+  };
+}
