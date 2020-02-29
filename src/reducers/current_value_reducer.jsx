@@ -3,6 +3,9 @@ const currentValueReducer = (state = " ", action) => {
   let num;
   switch (action.type) {
     case 'SET_CURRENT_VALUE':
+      if (typeof(action.payload) === 'object') {
+        return action.payload.answer;
+      }
       if (['*', '+', '=', '÷', 'clear', '-'].includes(action.payload)) {
         if (action.payload === 'clear' || action.payload === '=') {
           return " ";
@@ -19,7 +22,3 @@ const currentValueReducer = (state = " ", action) => {
   }
 };
 export default currentValueReducer;
-
-const calculator = () => {
-
-};
