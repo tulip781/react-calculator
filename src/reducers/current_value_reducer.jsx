@@ -19,3 +19,7 @@ const currentValueReducer = (state = " ", action) => {
   }
 };
 export default currentValueReducer;
+
+const calculator = () => {
+
+};
