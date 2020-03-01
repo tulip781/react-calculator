@@ -1,4 +1,4 @@
-const sumReducer = (state = 0, action) => {
+const sumReducer = (state = '', action) => {
   // TO DO handle actions
   let sum;
   switch (action.type) {

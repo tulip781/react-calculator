@@ -15,22 +15,9 @@ export function sumValue(buttonValue) {
   };
 }
 
-
 export function setCurrentValueAndSum(buttonValue) {
   return (dispatch, getState) => {
-    console.log(getState().sum.toString());
     dispatch(setCurrentValue(buttonValue));
     dispatch(sumValue(buttonValue));
   };
 }
-
-export function calcAndDisplay(buttonValue) {
-  return (dispatch, getState) => {
-    let answer = {};
-    eval(getState().sum)
-    sumValue(buttonValue);
-    dispatch(setCurrentValue(buttonValue));
-    dispatch(sumValue(buttonValue));
-  };
-}
-

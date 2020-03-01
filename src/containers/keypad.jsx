@@ -18,6 +18,5 @@ class Keypad extends Component {
   }
 }
 
-
 export default Keypad;
 
